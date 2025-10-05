@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Task Quest</h1>
+
+    <!-- Task Input -->
+    <div class="input-task">
+        <input type="text" id="task-input" placeholder="Enter new task">
+        <select id="priority-select">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+        </select>
+        <input type="date" id="deadline-input">
+        <select id="recurring-select">
+            <option value="none">One-time</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <button type="button" id="add-task-btn">Add Task</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container">
+        <label>Progress:</label>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p>Points: <span id="points">0</span> | Streak: <span id="streak">0</span></p>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+
+    <!-- Summary -->
+    <div class="summary">
+        <h3>Summary</h3>
+        <p>Total Tasks: <span id="total-tasks">0</span></p>
+        <p>Pending Tasks: <span id="pending-tasks">0</span></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
